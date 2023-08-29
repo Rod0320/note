@@ -1,2 +1,2 @@
-# fabric-note
-fabric 笔记
+# note
+笔记
