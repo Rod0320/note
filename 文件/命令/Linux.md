@@ -15,9 +15,16 @@ firewall-cmd --permanent --list-ports
 # 开放端口
 
 ```shell
-firewall-cmd --add-port=3306/tcp --permanent # 添加指定需要开放的端口
-firewall-cmd --reload # 重载入添加的端口
-firewall-cmd --query-port=3306/tcp # 查询指定端口是否开启成功
+# 添加指定需要开放的端口
+# 重载入添加的端口
+# 查询
+sudo firewall-cmd --add-port=80/tcp --permanent
+sudo firewall-cmd --zone=public --permanent --add-port=443/tcp
+sudo firewall-cmd --permanent --add-port=32000/tcp
+sudo firewall-cmd --permanent --add-port=32001/tcp
+sudo firewall-cmd --permanent --add-port=32002/tcp
+firewall-cmd --reload
+firewall-cmd --permanent --list-ports
 ```
 
 # 移除指定端口
